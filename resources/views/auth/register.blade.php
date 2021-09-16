@@ -38,6 +38,53 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __(' address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}"  autocomplete="address" autofocus>
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>   
+
+                        <div class="form-group row">
+                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __(' gender') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="gender" placeholder="male or female" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}"  autocomplete="gender" autofocus>
+
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>  
+                        
+                        {{-- <div class="form-group row">
+                            <label for="" class="col-md-4 pd-2 text-md-right">{{ __(' gender') }}</label>
+
+                            <div class="col-md-6">
+
+                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Male" required/>
+                                <label   label for="Male">Male</label>
+
+                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Female" required/>
+                                <label for="Female">Female</label>
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div> --}}          
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

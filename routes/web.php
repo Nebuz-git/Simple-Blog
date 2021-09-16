@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/index' , 'PagesController@index'); 
+Route::get('/posts/{id}' , 'PostsController@post'); 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
